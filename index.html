@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>สปอยหนังด้วย AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Sarabun:400,700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sarabun', sans-serif;
+            background: #f7f7f7;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 420px;
+            margin: 32px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 32px 24px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #222;
+        }
+        .modern-form {
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 18px;
+            width: 100%;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 1rem;
+            color: #333;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #fafbfc;
+            box-sizing: border-box;
+        }
+        button {
+            background: #3b82f6;
+            color: #fff;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        .modern-result {
+            margin-top: 24px;
+            width: 100%;
+            min-height: 60px;
+            background: #f3f4f6;
+            border-radius: 6px;
+            padding: 16px;
+            font-size: 1rem;
+            color: #222;
+            box-sizing: border-box;
+            word-break: break-word;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 สปอยหนังด้วย AI Gemini</h1>
+        <form id="spoilForm" class="modern-form">
+            <div class="form-group">
+                <label for="movie">ชื่อภาพยนตร์</label>
+                <input type="text" id="movie" placeholder="กรอกชื่อหนังที่ต้องการสปอย" required>
+            </div>
+            <div class="form-group">
+                <label for="detail">ต้องการสปอยแบบไหน</label>
+                <select id="detail" required>
+                    <option value="">--เลือกประเภทสปอย--</option>
+                    <option value="สั้น">สั้น (1-2 ย่อหน้า)</option>
+                    <option value="ยาว">ยาว (ละเอียด)</option>
+                    <option value="ตลก">ตลก</option>
+                </select>
+            </div>
+            <button type="submit">สปอยหนัง</button>
+        </form>
+        <div id="result" class="modern-result"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

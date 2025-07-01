@@ -1,0 +1,101 @@
+body {
+    font-family: 'Sarabun', sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.container {
+    max-width: 420px;
+    margin: 32px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(80,120,255,0.06);
+    padding: 28px 18px 18px 18px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 0.5px;
+    font-size: 1.3rem;
+}
+.gemini-logo {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+.modern-form .form-group {
+    margin-bottom: 14px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+select, input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 7px 9px;
+    border: 1px solid #cfd8dc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fafbfc;
+    transition: border 0.2s;
+    outline: none;
+}
+select:focus, input[type="number"]:focus, input[type="text"]:focus {
+    border: 1px solid #90caf9;
+    background: #fff;
+}
+button, .modern-btn {
+    width: 100%;
+    padding: 10px 0;
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background 0.2s;
+}
+button:hover, .modern-btn:hover {
+    background: #2563eb;
+}
+.modern-result {
+    margin-top: 18px;
+    background: #f3f4f6;
+    border-radius: 5px;
+    padding: 12px 10px;
+    min-height: 40px;
+    font-size: 1rem;
+    color: #222;
+    white-space: pre-wrap;
+    word-break: break-word;
+    box-shadow: none;
+    position: relative;
+}
+.spoil-line {
+    margin-bottom: 10px;
+    padding-left: 16px;
+    border-left: 3px solid #3b82f6;
+    background: #fafdff;
+    border-radius: 3px;
+    font-size: 1.04em;
+    line-height: 1.7;
+    transition: background 0.2s;
+}
+.spoil-line:last-child {
+    margin-bottom: 0;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 12px 3vw 12px 3vw;
+    }
+    h1 {
+        font-size: 1.05rem;
+    }
+}
